@@ -1,0 +1,36 @@
+<!--index.wxml-->
+<view class='list {{active?"touch-move":""}}' bindtouchstart="touchStart" bindtouchmove="touchMove">
+  <view class="item">
+    <view class="circle">
+      <icon wx:if="true" type="success"></icon>
+      <icon wx:else type="circle"></icon>
+    </view>
+    <view class="img">
+      <image src="../../images/item-1.jpg"></image>
+    </view>
+    <view class="info">
+      <view class="title">良品铺子-肉松饼</view>
+      <view class="desc">
+        新华社北京6月8日电  国务院总理李克强6月8日下午在中南海紫光
+        阁应约同乌兹别克斯坦总理阿里波夫举行视频会晤。
+      </view>
+      <view class="bottom">
+        <view class="money">￥36.00</view>
+        <text class="sub">-</text>
+        <text class="num">1</text>
+        <text class="add">+</text>
+      </view>
+    </view>
+  </view>
+  <view class="delete">删除</view>
+</view>
+
+<view class="myCart-bottom">
+  <view class="selectedAll">
+    <icon wx:if="{{isSeletedAll}}" type="success"></icon>
+    <icon wx:else type="circle"></icon>
+    <text>全选</text>
+  </view>
+  <text class="heji">合计：<text>0.00</text></text>
+  <text class="jiesuan {{num>0?'acitveAll':''}}">结算：0.00</text>
+</view>

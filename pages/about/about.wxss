@@ -1,0 +1,37 @@
+/* .log-list {
+  display: flex;
+  flex-direction: column;
+  padding: 40rpx;
+}
+.log-item {
+  margin: 10rpx;
+} */
+page {
+  background: #f5f5f5;
+}
+.item {
+  background: #eee;
+  height: 200rpx;
+  width: 100%;
+  display: flex;
+}
+.nr {
+  background: pink;
+  width: 100%;
+  margin-left: -90px;
+  transform: translateX(90px);
+  transition: all .4s;
+}
+.delete {
+  width: 90px;
+  background: red;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(90px);
+  transition: all .4s;
+}
+.move .nr,.move .delete{
+  transform: translateX(0);
+}

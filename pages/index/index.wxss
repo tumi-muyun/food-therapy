@@ -1,0 +1,81 @@
+/**index.wxss**/
+.header {
+  height: 338rpx;
+  position: relative;
+}
+.header image {
+  width: 100%;
+  height: 338rpx;
+}
+.nr {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 56rpx;
+  line-height: 56rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 28rpx;
+  background: rgba(0, 0, 0, .5);
+}
+.page {
+  position: absolute;
+  bottom: 0;
+  right: 10rpx;
+  height: 56rpx;
+  line-height: 56rpx;
+  color: #fff;
+  font-size: 28rpx;
+}
+
+.middle {
+  display: flex;
+  font-size: 28rpx;
+  color: #666;
+  text-align: center;
+  margin: 40rpx 20rpx;
+}
+.middle image {
+  width: 306rpx;
+  height: 186rpx;
+}
+.nav {
+  flex: 1;
+  justify-content: center;
+}
+
+.list {
+  margin: 10rpx;
+  padding: 10rpx;
+  border-bottom: 1px solid #eee;
+}
+.content {
+  position: relative;
+  padding: 10rpx 0;
+  display: flex;
+  font-size: 24rpx;
+}
+.img image {
+  width: 214rpx;
+  height: 138rpx;
+  padding-right: 20rpx;
+}
+.info {
+  flex: 1;
+  position: relative;
+  height: 138rpx;
+}
+.desc {
+  color: #666;
+  line-height: 34rpx;
+}
+.yd {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.yd text {
+  color: red;
+  padding-right: 4rpx;
+}

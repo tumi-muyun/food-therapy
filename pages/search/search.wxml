@@ -1,0 +1,8 @@
+<view class="seach">
+  <input type="text" placeholder="请输入你想搜素的内容"/>
+</view>
+
+<!-- 搜索的内容 -->
+<import src="../../templates/productList/productList.wxml"></import>
+
+<template is="productList"></template>

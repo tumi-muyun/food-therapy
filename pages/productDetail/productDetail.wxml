@@ -1,0 +1,26 @@
+<view class="title">御食园小吃礼盒1200g</view>
+
+<view class="jiage">价格：69.00-88.00</view>
+
+<view class="img">
+  <image src="../../images/item-2.jpg"></image>
+</view>
+
+<view class="content">
+  李克强指出，中方愿同乌方继续携手合作抗击疫情，
+  将向乌方提供力所能及的帮助，支持两国企业本着互利
+  共赢的原则开展疫苗联合生产。希望双方按照市场原则和商
+  业规则深化各领域合作，更好造福两国人民。中方愿为乌方特色
+  农产品输华提供通关便利。明年将迎来中乌建交30周年，希望以
+  此为契机，举办形式多样的庆祝活动，加强人文交流，增进两国
+  人民的相互了解和传统友谊。中方愿同乌方加强在上海合作组织
+  框架内的协调配合，  为地区国家疫后复苏和民生改善提供更多助力。
+</view>
+
+<view class="bottom">
+  <view class="img">
+    <image src="../../images/tab9.png"></image>
+  </view>
+  <text class="add-shop">加入购物车</text>
+  <text class="buy-now">直接购买</text>
+</view>

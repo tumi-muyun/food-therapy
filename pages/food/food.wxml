@@ -1,0 +1,24 @@
+<!--index.wxml-->
+<view class="header">
+  <navigator class='location'>上海</navigator>
+  <view class="inp">
+    <navigator>请输入你想要的内容</navigator>
+  </view>
+</view>
+
+<view class="nav">
+  <view class="item" wx:for="{{navBarArr}}" wx:key="index">
+    <navigator>
+      <view class="img">
+        <image src="{{item.imgUrl}}"></image>
+      </view>
+      <view>{{item.name}}</view>
+    </navigator>
+  </view>
+</view>
+
+<import src="/templates/productList/productList.wxml"></import>
+
+<template is="productList"></template>
+
+<view>我是有底线的，没有更多数据了</view>

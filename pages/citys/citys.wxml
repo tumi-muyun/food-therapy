@@ -1,0 +1,5 @@
+<!-- 定位 -->
+<view class="title">推荐</view>
+<button size="mini" class="dw">定位</button>
+<view class="title">热门城市</view>
+<button size="mini" class="btn">上海</button>
