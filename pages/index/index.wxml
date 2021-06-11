@@ -1,18 +1,12 @@
 <!--index.wxml-->
 <view class="header">
   <swiper autoplay="true" interval="3000" circular="true" bindchange="swiperChange">
-    <swiper-item>
-      <image src="../../images/banner.jpg"></image>
-    </swiper-item>
-    <swiper-item>
-      <image src="../../images/banner.jpg"></image>
-    </swiper-item>
-    <swiper-item>
-      <image src="../../images/banner.jpg"></image>
+    <swiper-item wx:for="{{bannerArr}}" wx:key="index">
+      <image src="{{item.image}}"></image>
+      <view class="nr">{{item.title}}</view>
     </swiper-item>
   </swiper>
-  <view class="nr">内容</view>
-  <view class="page">{{num}}/3</view>
+  <view class="page">{{num}}/{{bannerArr.length}}</view>
 </view>
 
 <view class="middle">
@@ -26,29 +20,17 @@
   </view>
 </view>
 
-<view class="bottom">
-  <view class="list">
-    <view class="title">标题</view>
-    <view class="content">
-      <view class="img">
-        <image src="../../images/shop.jpg"></image>
-      </view>
-      <view class="info">
-        <view class="desc">哒哒哒。。。</view>
-        <view class="yd"><text>30</text>次阅读</view>
-      </view>
+
+<view class="list" wx:for="{{list}}" wx:key="index" bindtap="tiao" data-mark="{{item.id}}">
+  <view class="title">{{item.title}}</view>
+  <view class="content">
+    <view class="img">
+      <image src="{{item.image}}"></image>
     </view>
-  </view>
-  <view class="list">
-    <view class="title">标题</view>
-    <view class="content">
-      <view class="img">
-        <image src="../../images/shop.jpg"></image>
-      </view>
-      <view class="info">
-        <view class="desc">哒哒哒。。。</view>
-        <view class="yd"><text>30</text>次阅读</view>
-      </view>
+    <view class="info">
+      <view class="desc">{{item.desc}}</view>
+      <view class="yd"><text>{{item.readNum}}</text>次阅读</view>
     </view>
   </view>
 </view>
+

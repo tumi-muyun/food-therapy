@@ -9,6 +9,7 @@
   margin-left: 20rpx;
 }
 .btn {
+  margin: 10rpx;
   font-weight: normal;
   background: #fff;
   margin-left: 20rpx;

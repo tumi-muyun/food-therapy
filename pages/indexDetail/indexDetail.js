@@ -1,3 +1,5 @@
+const http = require("../../utils/http");
+
 // pages/indexDetail/indexDetail.js
 Page({
 
@@ -12,6 +14,25 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    // console.log(options);
+    wx.showNavigationBarLoading();
+    wx.request({
+      url: 'http://iwenwiki.com:3002/api/indexlist/detail',
+      data:{
+        id:options.id
+      },
+      success:res=>{
+        // console.log(res);
+        wx.hideNavigationBarLoading();
+        //动态设置当前页面的标题
+        wx.setNavigationBarTitle({
+          title: res.data[0].title,
+        })
+        this.setData({
+          objInfo:res.data[0]
+        })
+      }
+    })
     
   },
 

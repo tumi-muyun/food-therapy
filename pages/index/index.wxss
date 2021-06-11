@@ -69,6 +69,11 @@
 .desc {
   color: #666;
   line-height: 34rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 .yd {
   position: absolute;

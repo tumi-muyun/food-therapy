@@ -7,12 +7,38 @@ Page({
   data: {
     list:[],
   },
-  
+  searchInput:function(e){
+    console.log(e.detail.value);
+    if(e.detail.value){
+      wx.request({
+        url: 'http://iwenwiki.com:3002/api/foods/select',
+        data:{
+          name:e.detail.value,
+          city:''
+        },
+        success:res=>{
+          console.log(res.data);
+          if(res.data.status==200){
+            this.setData({
+              list:res.data.data
+            })
+          }else{
+            console.log('查无数据');
+          }
+        }
+      })
+    }else{
+      console.log('输入内容不能为空');
+      this.setData({
+        list:[]
+      })
+    }
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    
   },
 
   /**

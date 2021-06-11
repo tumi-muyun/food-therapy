@@ -1,16 +1,15 @@
 <template name="productList">
-  <navigator>
+  <navigator url="../productDetail/productDetail?codeId={{item.id}}">
     <view class="itemP">
       <view class="imgP">
-        <image src="../../images/item-2.jpg"></image>
+        <image src="{{item.pic}}"></image>
       </view>
       <view class="info">
-        <view class="title">御食园小吃礼盒1200g</view>
-        <view class="desc">新华社北京6月8日电  国务院总理李克强6月8日下午在中南
-        海紫光阁应约同乌兹别克斯坦总理阿里波夫举行视频会晤。</view>
+        <view class="title">{{item.name}}</view>
+        <view class="desc">{{item.description}}</view>
         <view class="bottom">
-          <view class="money">￥36.99</view>
-          <view class="fk">789人付款</view>
+          <view class="money">￥{{item.price}}</view>
+          <view class="fk">{{item.buynum}}人付款</view>
         </view>
       </view>
     </view>

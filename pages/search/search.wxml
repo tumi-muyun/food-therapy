@@ -1,8 +1,10 @@
 <view class="seach">
-  <input type="text" placeholder="请输入你想搜素的内容"/>
+  <input bindblur="searchInput" focus="true" type="text" placeholder="请输入你想搜素的内容"/>
 </view>
 
 <!-- 搜索的内容 -->
 <import src="../../templates/productList/productList.wxml"></import>
 
-<template is="productList"></template>
+<block wx:for="{{list}}" wx:key="index">
+  <template is="productList" data="{{item}}"></template>
+</block>

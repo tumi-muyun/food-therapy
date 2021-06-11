@@ -1,14 +1,14 @@
 <!--index.wxml-->
 <view class="header">
-  <navigator class='location'>上海</navigator>
+  <navigator class='location' hover-class="none" url="../citys/citys">{{location}}</navigator>
   <view class="inp">
-    <navigator>请输入你想要的内容</navigator>
+    <navigator hover-class="none" url="../search/search">请输入你想要的内容</navigator>
   </view>
 </view>
 
 <view class="nav">
   <view class="item" wx:for="{{navBarArr}}" wx:key="index">
-    <navigator>
+    <navigator hover-class="none" url="../list/list?mark={{item.id}}">
       <view class="img">
         <image src="{{item.imgUrl}}"></image>
       </view>
@@ -19,6 +19,8 @@
 
 <import src="/templates/productList/productList.wxml"></import>
 
-<template is="productList"></template>
+<view wx:for="{{listArr}}" wx:key='index'>
+  <template is="productList" data='{{item}}'></template>
+</view>
 
-<view>我是有底线的，没有更多数据了</view>
+<view>{{msg}}</view>
